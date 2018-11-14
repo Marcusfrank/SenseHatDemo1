@@ -2,27 +2,26 @@ from random import randint
 from sense_hat import SenseHat
 from time import sleep
 
-
 sense = SenseHat()
-sense.flip_h()
-sense.flip_v() 
 
+w = (150, 150, 150)
+b = (0, 0, 255)
+e = (0, 0, 0)
 
-X = [255, 0, 0]  # Red
-O = [255, 255, 255]  # White
-
-question_mark = [
-O, O, O, X, X, O, O, O,
-O, O, X, O, O, X, O, O,
-O, O, O, O, O, X, O, O,
-O, O, O, O, X, O, O, O,
-O, O, O, X, O, O, O, O, 
-O, O, O, X, O, O, O, O,
-O, O, O, O, O, O, O, O,
-O, O, O, X, O, O, O, O
+image = [
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+w,w,w,e,e,w,w,w,
+w,w,b,e,e,w,w,b,
+w,w,w,e,e,w,w,w,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e
 ]
 
-sense.set_pixels(question_mark)
+sense.set_pixels(image)
 
-while True: 
+while True:
+    sleep(1)
     sense.flip_h()
+  
