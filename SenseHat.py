@@ -19,10 +19,10 @@ while True:
 
   # Update the rotation of the display depending on which way up the Sense HAT is
 	if x  == -1:
-	  sense.set_rotation(180)
-	elif y == 1:
 	  sense.set_rotation(90)
-	elif y == -1:
-	  sense.set_rotation(270)
-	else:
+	elif y == 1:
 	  sense.set_rotation(0)
+	elif y == -1:
+	  sense.set_rotation(180)
+	else:
+	  sense.set_rotation(270)
